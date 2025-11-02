@@ -1,0 +1,88 @@
+* { box-sizing: border-box;}
+body , #root { margin: 0; height: 100%; font-family: system-ui, Arial, sans-serif;}
+
+.app {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.panel {
+  width: min(900px,100%);
+  background: #ffffff;
+  border: 1px solid #d9e1ef;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.tag {
+  border: 1px solid #8fb4eb;
+  margin:8px 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.tagHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #4ea1ff;
+  color: #083b66;
+  padding: 6px 8px;
+}
+
+.tag.root .tagHeader { font-weight: 700; }
+.toggleBtn .addBtn .exportBtn {
+  border: none;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: #e7f1ff;
+  cursor: pointer;
+}
+
+.toggleBtn { width : 32px;}
+.addBtn {margin-left: auto;}
+
+.name {
+  padding:  2px 6px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 4px;
+  cursor: text;
+}
+
+.nameInput {
+  border: 1px solid #b5d0ff;
+  border-radius: 4px;
+  padding: 4px 6px;
+  min-width: 160px;
+}
+
+.tagBody{padding : 10px 12px; background : #f0f7ff;}
+
+.dataRow {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0 12px;
+}
+
+.dataInput {
+  border: 1px solid #c6d8ff;
+  border-radius: 4px;
+  padding: 6px 8px;
+  width: 100%;
+}
+
+.toolbar { margin-top: 8px;}
+.exportBtn {
+  background: #0b102030;
+  border:1px solid #e6e6e6;
+  padding: 10px;
+  border-radius: 6px;
+  white-space: pre-wrap;
+  margin-top: 8px;
+}
