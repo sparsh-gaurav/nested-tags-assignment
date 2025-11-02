@@ -61,10 +61,8 @@ export default function App() {
   const applyAtPath = (path:number[], updater: (n:TreeNode) => TreeNode) => 
     setTree((curr)=> updateAtPath(curr, path, updater));
 
-  const exportJson = useMemo(
-    () => JSON.stringify(clean(tree), null, 2),
-    [tree]
-  );
+  const [exportValue, setExportValue] = useState<string>();
+
 
   return (
     <div className="app">
@@ -73,14 +71,16 @@ export default function App() {
         <div className="toolbar">
           <button 
           className="exportBtn"
-          onClick={() => console.log(exportJson)}
+          onClick={() => {
+            setExportValue(JSON.stringify(clean(tree), null, 2));
+          }}
           title="Also Printed To Console"
           >
             Export
           </button>
         </div>
         <pre className="exportBox" >
-          {exportJson}
+          {exportValue}
         </pre>
       </div>
     </div>
