@@ -1,4 +1,3 @@
-// ...existing code...
 # assignment-for-nested-tags
 
 A small React + TypeScript app (Vite) that demonstrates nested tag/tree editing with editable tag names, data nodes, and child management.
